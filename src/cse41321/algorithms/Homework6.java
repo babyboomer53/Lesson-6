@@ -408,7 +408,7 @@ public class Homework6 {
      */
     public interface Visitor<E> {
         void visit(E data);
-    }
+    }   // End of Visitor interface definition
 
     /**
      * TreeAlgorithms class
