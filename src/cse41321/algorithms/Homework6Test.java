@@ -95,6 +95,76 @@ public class Homework6Test {
         assertEquals(testVisitor.getVisitedData(), expectedResult);
     }
 
+    @Test
+    public void preOrderTraversal() {
+        Homework6.SinglyLinkedList<Integer> expectedResult = new Homework6.SinglyLinkedList<>();
+        expectedResult.insertTail(1);
+        expectedResult.insertTail(2);
+        expectedResult.insertTail(4);
+        expectedResult.insertTail(7);
+        expectedResult.insertTail(3);
+        expectedResult.insertTail(5);
+        expectedResult.insertTail(6);
+        expectedResult.insertTail(8);
+        expectedResult.insertTail(9);
+
+        Homework6.TreeAlgorithms.traversePreOrder(firstTree, testVisitor);
+
+        assertEquals(testVisitor.getVisitedData(), expectedResult);
+
+        expectedResult = new Homework6.SinglyLinkedList<>();
+        expectedResult.insertTail(6);
+        expectedResult.insertTail(4);
+        expectedResult.insertTail(2);
+        expectedResult.insertTail(1);
+        expectedResult.insertTail(3);
+        expectedResult.insertTail(5);
+        expectedResult.insertTail(8);
+        expectedResult.insertTail(7);
+        expectedResult.insertTail(9);
+
+        testVisitor = new Homework6.TestVisitor();
+
+        Homework6.TreeAlgorithms.traversePreOrder(secondTree, testVisitor);
+
+        assertEquals(testVisitor.getVisitedData(), expectedResult);
+    }
+
+    @Test
+    public void postOrderTraversal() {
+        Homework6.SinglyLinkedList<Integer> expectedResult = new Homework6.SinglyLinkedList<>();
+        expectedResult.insertTail(7);
+        expectedResult.insertTail(4);
+        expectedResult.insertTail(2);
+        expectedResult.insertTail(5);
+        expectedResult.insertTail(9);
+        expectedResult.insertTail(8);
+        expectedResult.insertTail(6);
+        expectedResult.insertTail(3);
+        expectedResult.insertTail(1);
+
+        Homework6.TreeAlgorithms.traversePostOrder(firstTree, testVisitor);
+
+        assertEquals(testVisitor.getVisitedData(), expectedResult);
+
+        expectedResult = new Homework6.SinglyLinkedList<>();
+        expectedResult.insertTail(1);
+        expectedResult.insertTail(3);
+        expectedResult.insertTail(2);
+        expectedResult.insertTail(5);
+        expectedResult.insertTail(4);
+        expectedResult.insertTail(7);
+        expectedResult.insertTail(9);
+        expectedResult.insertTail(8);
+        expectedResult.insertTail(6);
+
+        testVisitor = new Homework6.TestVisitor();
+
+        Homework6.TreeAlgorithms.traversePostOrder(secondTree, testVisitor);
+
+        assertEquals(testVisitor.getVisitedData(), expectedResult);
+    }
+
     @org.testng.annotations.AfterMethod
     public void tearDown() {
         firstTree = null;
