@@ -21,3 +21,5 @@ The success of the unit test of the in-order method was probably sufficient to c
 correctly. Besides, I was reusing code that had already been rigorously tested. Regardless, I implemented a couple of
 additional tests just to be thorough.
 
+Considering that I was reusing code that was likely already rigorously tested, I wasted a lot of time on those unit 
+tests.

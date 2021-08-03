@@ -509,4 +509,46 @@ public class Homework6 {
             visitedData.insertTail(data);
         }
     }
+
+    public static int getLeafCount(BinaryTree.Node node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.hasLeft() && node.hasRight()) {
+            return 1;
+        } else {
+            return getLeafCount(node.getLeft()) + getLeafCount(node.getRight());
+        }
+    }
+
+    public static int countLeaves(BinaryTree<Integer> tree) {
+        return getLeafCount(tree.getRoot());
+    }
+    /*
+    public static int countNonLeaves(BinaryTree tree) {
+
+    }
+
+    public static int getHeight(BinaryTree tree) {
+
+    }
+
+    public static void printPreOrder(BinaryTree tree) {
+
+    }
+
+    public static void printInOrder(BinaryTree tree) {
+
+    }
+
+    public static void printPostOrder(BinaryTree tree) {
+
+    }
+
+    public static void removeLeaves(BinaryTree tree) {
+
+    }
+    */
+
 }
+
