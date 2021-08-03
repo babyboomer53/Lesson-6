@@ -4,3 +4,20 @@
 ## Raymond Mitchell III (Instructor)
 ## Assignment #6
 ### Binary Tree Algorithms
+### Problem Statement
+### Proposed Solution
+### Implementation
+#### Source Code
+#### Homework6 class
+#### Homework6Test class
+### Results
+### Postmortem
+The first unit test of the in-order method failed on the second tree. When I discovered that I had inadvertently omitted
+a couple of nodes/leaves, I thought I had found the remedy. However, the test continue to fail! That's when I discovered
+that, because I was testing both trees in a single test method, I needed a fresh (new) "Visitor" each time. So, I 
+ensured that before each call to the in-order method, I instantiated a new Visitor object.
+
+The success of the unit test of the in-order method was probably sufficient to confirm that trees had been constructed
+correctly. Besides, I was reusing code that had already been rigorously tested. Regardless, I implemented a couple of
+additional tests just to be thorough.
+

@@ -1,5 +1,7 @@
 package cse41321.algorithms;
 
+import org.testng.annotations.Test;
+
 import static org.testng.Assert.*;
 
 public class Homework6Test {
@@ -48,12 +50,49 @@ public class Homework6Test {
         secondTree.insertRoot(6);
         secondTree.getRoot().insertLeft(4);
         secondTree.getRoot().getLeft().insertLeft(2);
+        secondTree.getRoot().getLeft().insertRight(5);
         secondTree.getRoot().getLeft().getLeft().insertLeft(1);
+        secondTree.getRoot().getLeft().getLeft().insertRight(3);
         secondTree.getRoot().insertRight(8);
         secondTree.getRoot().getRight().insertLeft(7);
         secondTree.getRoot().getRight().insertRight(9);
 
         testVisitor = new Homework6.TestVisitor();
+    }
+
+    @Test
+    public void inOrderTraversal() {
+        Homework6.SinglyLinkedList<Integer> expectedResult = new Homework6.SinglyLinkedList<>();
+        expectedResult.insertTail(7);
+        expectedResult.insertTail(4);
+        expectedResult.insertTail(2);
+        expectedResult.insertTail(1);
+        expectedResult.insertTail(5);
+        expectedResult.insertTail(3);
+        expectedResult.insertTail(6);
+        expectedResult.insertTail(8);
+        expectedResult.insertTail(9);
+
+        Homework6.TreeAlgorithms.traverseInOrder(firstTree, testVisitor);
+
+        assertEquals(testVisitor.getVisitedData(), expectedResult);
+
+        expectedResult = new Homework6.SinglyLinkedList<>();
+        expectedResult.insertTail(1);
+        expectedResult.insertTail(2);
+        expectedResult.insertTail(3);
+        expectedResult.insertTail(4);
+        expectedResult.insertTail(5);
+        expectedResult.insertTail(6);
+        expectedResult.insertTail(7);
+        expectedResult.insertTail(8);
+        expectedResult.insertTail(9);
+
+        testVisitor = new Homework6.TestVisitor();
+
+        Homework6.TreeAlgorithms.traverseInOrder(secondTree, testVisitor);
+
+        assertEquals(testVisitor.getVisitedData(), expectedResult);
     }
 
     @org.testng.annotations.AfterMethod
