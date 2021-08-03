@@ -5,9 +5,10 @@ import java.util.NoSuchElementException;
 public class Homework6 {
     /**
      * A generic BinaryTree class
+     *
      * @param <E>
      */
-    public class BinaryTree<E> {
+    public static class BinaryTree<E> {
         /**
          * An inner class defining a Node type
          */
@@ -223,8 +224,7 @@ public class Homework6 {
                 // Insert into empty list
                 head = newElement;
                 tail = newElement;
-            }
-            else {
+            } else {
                 // Insert into non-empty list
                 newElement.next = head;
                 head = newElement;
@@ -242,8 +242,7 @@ public class Homework6 {
                 // Insert into empty list
                 head = newElement;
                 tail = newElement;
-            }
-            else {
+            } else {
                 // Insert into non-empty list
                 tail.next = newElement;
                 tail = newElement;
@@ -272,8 +271,7 @@ public class Homework6 {
                 // Insert new tail
                 element.next = newElement;
                 tail = newElement;
-            }
-            else {
+            } else {
                 // Insert into middle of list
                 newElement.next = element.next;
                 element.next = newElement;
@@ -296,8 +294,7 @@ public class Homework6 {
                 // Handle removal of the last element
                 head = null;
                 tail = null;
-            }
-            else {
+            } else {
                 head = head.next;
             }
 
@@ -332,8 +329,7 @@ public class Homework6 {
                 // Remove the tail
                 element.next = null;
                 tail = element;
-            }
-            else {
+            } else {
                 // Remove from middle of list
                 element.next = elementToRemove.next;
             }
@@ -369,6 +365,7 @@ public class Homework6 {
 
     /**
      * A generic Queue class
+     *
      * @param <E>
      */
     public static class Queue<E> {
@@ -500,4 +497,16 @@ public class Homework6 {
         }
     }
 
+    static class TestVisitor implements Visitor<Integer> {
+
+        private SinglyLinkedList<Integer> visitedData = new SinglyLinkedList<Integer>();
+
+        public SinglyLinkedList<Integer> getVisitedData() {
+            return visitedData;
+        }
+
+        public void visit(Integer data) {
+            visitedData.insertTail(data);
+        }
+    }
 }
