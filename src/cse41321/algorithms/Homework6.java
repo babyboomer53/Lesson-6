@@ -510,29 +510,34 @@ public class Homework6 {
         }
     }
 
-    public static int getLeafCount(BinaryTree.Node node) {
+    public static int getLeafCount(BinaryTree<Integer>.Node node) {
         if (node == null) {
             return 0;
         }
-        if (node.hasLeft() && node.hasRight()) {
+        if (!node.hasLeft() && !node.hasRight()) {
             return 1;
         } else {
             return getLeafCount(node.getLeft()) + getLeafCount(node.getRight());
         }
     }
 
+    public static int getHeight(BinaryTree<Integer>.Node node) {
+        if (node == null) return 0;
+        return 1 + Math.max(getHeight(node.getLeft()), getHeight(node.getRight()));
+    }
+
     public static int countLeaves(BinaryTree<Integer> tree) {
         return getLeafCount(tree.getRoot());
     }
-    /*
-    public static int countNonLeaves(BinaryTree tree) {
 
+    public static int countNonLeaves(BinaryTree<Integer> tree) {
+        return tree.getSize() - getLeafCount(tree.getRoot());
     }
 
     public static int getHeight(BinaryTree tree) {
-
+        return getHeight(tree.getRoot());
     }
-
+/*
     public static void printPreOrder(BinaryTree tree) {
 
     }

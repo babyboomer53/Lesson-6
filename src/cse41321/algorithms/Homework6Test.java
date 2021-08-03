@@ -165,6 +165,24 @@ public class Homework6Test {
         assertEquals(testVisitor.getVisitedData(), expectedResult);
     }
 
+    @Test
+    public void leafCount() {
+        assertEquals(Homework6.countLeaves(firstTree), 3);
+        assertEquals(Homework6.countLeaves(secondTree),5);
+    }
+
+    @Test
+    public void nonleafCount() {
+        assertEquals(Homework6.countNonLeaves(firstTree), 6);
+        assertEquals(Homework6.countNonLeaves(secondTree),4);
+    }
+
+    @Test
+    public void height() {
+        assertEquals(Homework6.getHeight(firstTree), 5);
+        assertEquals(Homework6.getHeight(secondTree),4);
+    }
+
     @org.testng.annotations.AfterMethod
     public void tearDown() {
         firstTree = null;

@@ -23,3 +23,6 @@ additional tests just to be thorough.
 
 Considering that I was reusing code that was likely already rigorously tested, I wasted a lot of time on those unit 
 tests.
+
+Wow! I ended up with two methods with the same name! The only thing distinguishing them is their parameter lists.
+I did not know that would work!
