@@ -1,8 +1,5 @@
 package cse41321.algorithms;
 
-import org.testng.internal.Graph;
-
-import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
 public class Homework6 {
@@ -662,7 +659,7 @@ public class Homework6 {
             System.out.println();
             System.out.printf("The height of tree #1 after removing the leaf nodes is, %d%n", Homework6.getHeight(firstTree));
 
-            //    T H E   S E C O N D   T R E E
+            //   T H E   S E C O N D   T R E E
             System.out.println();
             System.out.print("The pre-order traversal of tree #2: ");
             Homework6.printPreOrder(secondTree);
