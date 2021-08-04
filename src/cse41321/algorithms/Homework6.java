@@ -2,6 +2,7 @@ package cse41321.algorithms;
 
 import org.testng.internal.Graph;
 
+import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
 public class Homework6 {
@@ -610,5 +611,77 @@ public class Homework6 {
         leafDelete(node);
     }
 
+    public static class Driver {
+        public static void main(String[] args) {
+            Homework6.BinaryTree<Integer> firstTree;
+            Homework6.BinaryTree<Integer> secondTree;
+            Homework6.TestVisitor testVisitor;
+
+            //   T H E   F I R S T   T R E E
+
+            firstTree = new Homework6.BinaryTree<>();
+            firstTree.insertRoot(1);
+            firstTree.getRoot().insertLeft(2);
+            firstTree.getRoot().getLeft().insertLeft(4);
+            firstTree.getRoot().getLeft().getLeft().insertLeft(7);
+            firstTree.getRoot().insertRight(3);
+            firstTree.getRoot().getRight().insertLeft(5);
+            firstTree.getRoot().getRight().insertRight(6);
+            firstTree.getRoot().getRight().getRight().insertRight(8);
+            firstTree.getRoot().getRight().getRight().getRight().insertRight(9);
+
+            //   T H E   S E C O N D   T R E E
+
+            secondTree = new Homework6.BinaryTree<>();
+            secondTree.insertRoot(6);
+            secondTree.getRoot().insertLeft(4);
+            secondTree.getRoot().getLeft().insertLeft(2);
+            secondTree.getRoot().getLeft().insertRight(5);
+            secondTree.getRoot().getLeft().getLeft().insertLeft(1);
+            secondTree.getRoot().getLeft().getLeft().insertRight(3);
+            secondTree.getRoot().insertRight(8);
+            secondTree.getRoot().getRight().insertLeft(7);
+            secondTree.getRoot().getRight().insertRight(9);
+
+            //   T H E   F I R S T   T R E E
+            System.out.print("The pre-order traversal of tree #1: ");
+            Homework6.printPreOrder(firstTree);
+            System.out.println();
+            System.out.print("The in-order traversal of tree #1: ");
+            Homework6.printInOrder(firstTree);
+            System.out.println();
+            System.out.print("The post-order traversal of tree #1: ");
+            Homework6.printPostOrder(firstTree);
+            System.out.println();
+            System.out.printf("The height of tree #1 is, %d%n", Homework6.getHeight(firstTree));
+            System.out.printf("Tree #1 has %d leaves.%n", Homework6.countLeaves(firstTree));
+            System.out.printf("There are %d \"non-leaves\" in tree #1.%n", Homework6.countNonLeaves(firstTree));
+            Homework6.removeLeaves(firstTree);
+            System.out.print("After removing the leaf nodes from tree #1: ");
+            Homework6.printInOrder(firstTree);
+            System.out.println();
+            System.out.printf("The height of tree #1 after removing the leaf nodes is, %d%n", Homework6.getHeight(firstTree));
+
+            //    T H E   S E C O N D   T R E E
+            System.out.println();
+            System.out.print("The pre-order traversal of tree #2: ");
+            Homework6.printPreOrder(secondTree);
+            System.out.println();
+            System.out.print("The in-order traversal of tree #2: ");
+            Homework6.printInOrder(secondTree);
+            System.out.println();
+            System.out.print("The post-order traversal of tree #2: ");
+            Homework6.printPostOrder(secondTree);
+            System.out.println();
+            System.out.printf("The height of tree #2 is, %d%n", Homework6.getHeight(secondTree));
+            System.out.printf("Tree #2 has %d leaves.%n", Homework6.countLeaves(secondTree));
+            System.out.printf("There are %d \"non-leaves\" in tree #2.%n", Homework6.countNonLeaves(secondTree));
+            Homework6.removeLeaves(secondTree);
+            System.out.print("After removing the leaf nodes from tree #2: ");
+            Homework6.printInOrder(secondTree);
+            System.out.println();
+            System.out.printf("The height of tree #1 after removing the leaf nodes is, %d%n", Homework6.getHeight(secondTree));
+        }
+    }
 }
 
