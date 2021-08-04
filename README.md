@@ -5,7 +5,30 @@
 ## Assignment #6
 ### Binary Tree Algorithms
 ### Problem Statement
+In this assignment,we were asked to implement a variety of methods that operate on binary trees, and to test those
+methods on the following two trees:
+![](the-tree-diagrams.png)
+We were required to implement seven methods and use the two trees illustrated above to demonstrate their functionality.
+The seven methods were as follows:
+* *public static int countLeaves(BinaryTree tree)*
+    * Returns the number of leaf nodes in the tree.
+* *public static int countNonLeaves(BinaryTree tree)*
+    *     Returns the number of non-leaf nodes in the tree.
+* *public static int getHeight(BinaryTree tree)*
+    *     Returns the height of the tree.
+* *public static void printPreOrder(BinaryTree tree)*
+    *     Returns the height of the tree.
+* *public static void printInOrder(BinaryTree tree)*
+    *     Prints the elements of the tree using an in-order traversal.
+* *public static void printPostOrder(BinaryTree tree)*
+    *     Prints the elements of the tree using a post-order traversal.
+* *public static void removeLeaves(BinaryTree tree)*
+    *     Removes all leaf nodes from the tree.
+
 ### Proposed Solution
+For this project I relied on several classes provided courtesy of the instructor. I *did* perform a modicum of unit testing on methods in those classes, until I realized how ridiculous that was. After all, I'm sure they were subjected to rigorous testing by their author. In fact, I've seen most of the test suites.
+
+
 ### Implementation
 #### Source Code
 #### Homework6 class
@@ -985,7 +1008,7 @@ So, it wasn't immediately apparent to me why the editor was flagging the stateme
 moments for me to figure it out. _Unfortunately_, that is not always the case. Sometimes it can take hours to find an
 error caused by single misplaced character in the source code.
 
-To divert a disaster, I push the repository to GitHub frequently.
+To ovoid a disaster, I push the project repository to GitHub frequently.
 
 The test suite is not very robust, but I soon realized that I could spend forever refining the test suite, and never get
 around to anything else.
