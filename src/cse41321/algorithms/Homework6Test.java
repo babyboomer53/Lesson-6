@@ -215,4 +215,11 @@ public class Homework6Test {
         assertTrue(this.consoleContent.toString().contains("1 2 3 4 5 6 7 8 9"));
     }
 
+    @Test
+    public void printPostOrder(){
+        Homework6.printPostOrder(firstTree);
+        assertTrue(this.consoleContent.toString().contains("7 4 2 5 9 8 6 3 1"));
+        Homework6.printPostOrder(secondTree);
+        assertTrue(this.consoleContent.toString().contains("1 3 2 5 4 7 9 8 6"));
+    }
 }

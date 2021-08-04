@@ -32,3 +32,5 @@ because a command was misspelled! The thing that made it so insidious was that t
 legitimate command. It was only the argument list that differentiated the command I wanted from the command I had typed.
 So, it wasn't immediately apparent to me why the editor was flagging statement. This time, it only took a few moments
 for me to figure it out.
+
+As a measure against disaster, I push to GitHub frequently.

@@ -559,11 +559,19 @@ public class Homework6 {
             currentElement = currentElement.getNext();
         }
     }
-/*
+
     public static void printPostOrder(BinaryTree tree) {
+        TestVisitor visitor = new TestVisitor();
+        TreeAlgorithms.traversePostOrder(tree, visitor);
+        SinglyLinkedList<Integer> singlyLinkedList = visitor.getVisitedData();
+        SinglyLinkedList<Integer>.Element currentElement = singlyLinkedList.getHead();
+        while (currentElement != null) {
+            System.out.printf("%d ", currentElement.getData());
+            currentElement = currentElement.getNext();
+        }
 
     }
-
+/*
     public static void removeLeaves(BinaryTree tree) {
 
     }
