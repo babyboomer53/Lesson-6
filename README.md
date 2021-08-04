@@ -25,9 +25,24 @@ The seven methods were as follows:
 * *public static void removeLeaves(BinaryTree tree)*
     *     Removes all leaf nodes from the tree.
 
-### Proposed Solution
-For this project I relied on several classes provided courtesy of the instructor. I *did* perform a modicum of unit testing on methods in those classes, until I realized how ridiculous that was. After all, I'm sure they were subjected to rigorous testing by their author. In fact, I've seen most of the test suites.
+### Implementation Plan
+For this project I relied on several classes provided courtesy of the instructor. I *did* perform a modicum of unit
+testing on methods in those classes, until I realized that probably wasn't the best use of my time. After all, I'm sure
+they were subjected to rigorous testing by their author. In fact, I've _seen_ most of the test suites.
 
+The classes I appropriated were as follows:
+
+* BinaryTree
+* Queue
+* SinglyLinkedList
+* TestVisitor
+  * an implementation of the Visitor interface
+* TreeAlgorithms
+
+These classes did most of the heavy lifting, but I was responsible for implementing the seven methods described in the
+*Problem Statement* section above. With each ensuing project, I try to make more use of TestNG framework. Although I
+wouldn't describe them as extensive, this suite consists of 10 individual unit tests. Time constraints prevented me from
+exploring that path as much as I might have liked.
 
 ### Implementation
 #### Source Code
@@ -1019,3 +1034,7 @@ isn't expecting any. I have no idea how long the _removeLeaves()_ method might h
 discovered the root cause. All I can say is that I toiled for at least a couple of hours.
 
 As of 4:51 on the morning of August 4, all of the coding is done.
+
+It is 7:56 in the morning on August 4. There is probably a lot more I'd like to say, but I'm going to close the book on
+this one. As usual, this was quite the learning experience. I try to get as much out of each assignment as I can, time
+permitting.
