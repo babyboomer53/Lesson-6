@@ -26,3 +26,6 @@ tests.
 
 Wow! I ended up with two methods with the same name! The only thing distinguishing them is their parameter lists.
 I did not know that would work!
+
+Here is an example of why programming is so tedious. There was a statement in the code being flagged by the editor
+because a command was misspelled! I was lucky that time. It only took a moment for me to spot the error

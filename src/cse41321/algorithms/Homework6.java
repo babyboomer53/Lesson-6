@@ -537,11 +537,19 @@ public class Homework6 {
     public static int getHeight(BinaryTree tree) {
         return getHeight(tree.getRoot());
     }
-/*
+
     public static void printPreOrder(BinaryTree tree) {
-
+        //SinglyLinkedList<Integer> singlyLinkedList = new SinglyLinkedList<>();
+        TestVisitor visitor = new TestVisitor();
+        TreeAlgorithms.traversePreOrder(tree, visitor);
+        SinglyLinkedList<Integer> singlyLinkedList = visitor.getVisitedData();
+        SinglyLinkedList<Integer>.Element currentElement = singlyLinkedList.getHead();
+        while (currentElement != null) {
+            System.out.printf("%d ", currentElement.getData());
+            currentElement = currentElement.getNext();
+        }
     }
-
+/*
     public static void printInOrder(BinaryTree tree) {
 
     }

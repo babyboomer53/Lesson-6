@@ -2,9 +2,15 @@ package cse41321.algorithms;
 
 import org.testng.annotations.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.testng.Assert.*;
 
 public class Homework6Test {
+
+    private final PrintStream originalStdOut = System.out;
+    private ByteArrayOutputStream consoleContent = new ByteArrayOutputStream();
 
     private Homework6.BinaryTree<Integer> firstTree;
     private Homework6.BinaryTree<Integer> secondTree;
@@ -58,6 +64,16 @@ public class Homework6Test {
         secondTree.getRoot().getRight().insertRight(9);
 
         testVisitor = new Homework6.TestVisitor();
+
+        // Redirect all System.out to consoleContent.
+        System.setOut(new PrintStream(this.consoleContent));
+    }
+
+    @org.testng.annotations.AfterMethod
+    public void tearDown() {
+        System.setOut(this.originalStdOut);     // Restore original standard out
+        // Clear the consoleContent.
+        this.consoleContent = new ByteArrayOutputStream();
     }
 
     @Test
@@ -183,10 +199,9 @@ public class Homework6Test {
         assertEquals(Homework6.getHeight(secondTree),4);
     }
 
-    @org.testng.annotations.AfterMethod
-    public void tearDown() {
-        firstTree = null;
-        secondTree = null;
-        testVisitor = null;
+    @Test
+    public void printPreOrder(){
+        Homework6.printPreOrder(firstTree);
+        assertTrue(this.consoleContent.toString().contains("1 2 4 7 3 5 6 8 9"));
     }
 }
