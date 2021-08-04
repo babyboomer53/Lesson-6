@@ -27,5 +27,8 @@ tests.
 Wow! I ended up with two methods with the same name! The only thing distinguishing them is their parameter lists.
 I did not know that would work!
 
-Here is an example of why programming is so tedious. There was a statement in the code being flagged by the editor
-because a command was misspelled! I was lucky that time. It only took a moment for me to spot the error
+This is an example of why programming is so tedious. There was a statement in the code being flagged by the editor
+because a command was misspelled! The thing that made it so insidious was that the misspelling actually represented a
+legitimate command. It was only the argument list that differentiated the command I wanted from the command I had typed.
+So, it wasn't immediately apparent to me why the editor was flagging statement. This time, it only took a few moments
+for me to figure it out.
