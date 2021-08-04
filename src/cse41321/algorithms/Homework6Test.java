@@ -184,23 +184,23 @@ public class Homework6Test {
     @Test
     public void leafCount() {
         assertEquals(Homework6.countLeaves(firstTree), 3);
-        assertEquals(Homework6.countLeaves(secondTree),5);
+        assertEquals(Homework6.countLeaves(secondTree), 5);
     }
 
     @Test
     public void nonleafCount() {
         assertEquals(Homework6.countNonLeaves(firstTree), 6);
-        assertEquals(Homework6.countNonLeaves(secondTree),4);
+        assertEquals(Homework6.countNonLeaves(secondTree), 4);
     }
 
     @Test
     public void height() {
         assertEquals(Homework6.getHeight(firstTree), 5);
-        assertEquals(Homework6.getHeight(secondTree),4);
+        assertEquals(Homework6.getHeight(secondTree), 4);
     }
 
     @Test
-    public void printPreOrder(){
+    public void printPreOrder() {
         Homework6.printPreOrder(firstTree);
         assertTrue(this.consoleContent.toString().contains("1 2 4 7 3 5 6 8 9"));
         Homework6.printPreOrder(secondTree);
@@ -208,7 +208,7 @@ public class Homework6Test {
     }
 
     @Test
-    public void printInOrder(){
+    public void printInOrder() {
         Homework6.printInOrder(firstTree);
         assertTrue(this.consoleContent.toString().contains("7 4 2 1 5 3 6 8 9"));
         Homework6.printInOrder(secondTree);
@@ -216,10 +216,18 @@ public class Homework6Test {
     }
 
     @Test
-    public void printPostOrder(){
+    public void printPostOrder() {
         Homework6.printPostOrder(firstTree);
         assertTrue(this.consoleContent.toString().contains("7 4 2 5 9 8 6 3 1"));
         Homework6.printPostOrder(secondTree);
         assertTrue(this.consoleContent.toString().contains("1 3 2 5 4 7 9 8 6"));
     }
+
+    @Test
+    public void removeTest() {
+        Homework6.removeLeaves(firstTree);
+        Homework6.printInOrder(firstTree);
+        assertTrue(this.consoleContent.toString().contains("4 2 1 3 6 8"));
+    }
+
 }

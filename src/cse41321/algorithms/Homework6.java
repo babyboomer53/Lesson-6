@@ -1,5 +1,7 @@
 package cse41321.algorithms;
 
+import org.testng.internal.Graph;
+
 import java.util.NoSuchElementException;
 
 public class Homework6 {
@@ -105,7 +107,7 @@ public class Homework6 {
             }
         }   // End of Node class
 
-        // Definition of the BinaryTree class continues hereâ€¦
+        // Definition of the BinaryTree class continues here
         private int size;
         private Node root;
 
@@ -167,6 +169,7 @@ public class Homework6 {
 
             return merged;
         }
+
     }   // BinaryTree class definition ends here
 
     /**
@@ -521,9 +524,17 @@ public class Homework6 {
         }
     }
 
-    public static int getHeight(BinaryTree<Integer>.Node node) {
-        if (node == null) return 0;
-        return 1 + Math.max(getHeight(node.getLeft()), getHeight(node.getRight()));
+    public static BinaryTree<Integer>.Node deleteLeaves(BinaryTree<Integer>.Node node) {
+        if (node == null) return null;
+        if (!node.hasLeft() && !node.hasRight()) {
+            node = null;
+        } else {
+            node = node.getLeft();
+            node = deleteLeaves(node.getLeft());
+            node = node.getRight();
+            node = deleteLeaves(node.getRight());
+        }
+        return node;
     }
 
     public static int countLeaves(BinaryTree<Integer> tree) {
@@ -534,8 +545,13 @@ public class Homework6 {
         return tree.getSize() - getLeafCount(tree.getRoot());
     }
 
-    public static int getHeight(BinaryTree tree) {
-        return getHeight(tree.getRoot());
+    public static int height(BinaryTree<Integer>.Node node) {
+        if (node == null) return 0;
+        return 1 + Math.max(height(node.getLeft()), height(node.getRight()));
+    }
+
+    public static int getHeight(BinaryTree<Integer> tree) {
+        return height(tree.getRoot());
     }
 
     public static void printPreOrder(BinaryTree tree) {
@@ -571,11 +587,28 @@ public class Homework6 {
         }
 
     }
-/*
-    public static void removeLeaves(BinaryTree tree) {
 
+    public static BinaryTree.Node leafDelete(BinaryTree.Node node) {
+        // Delete leaf nodes from binary search tree.
+
+        if (node == null) {
+            return null;
+        }
+        if (node.left == null && node.right == null) {
+            return null;
+        }
+
+        // Else recursively delete in left and right subtrees.
+        node.left = leafDelete(node.left);
+        node.right = leafDelete(node.right);
+
+        return node;
     }
-    */
+
+    public static void removeLeaves(BinaryTree tree) {
+        BinaryTree.Node node = tree.getRoot();
+        leafDelete(node);
+    }
 
 }
 

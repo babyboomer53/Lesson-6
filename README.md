@@ -30,7 +30,15 @@ I did not know that would work!
 This is an example of why programming is so tedious. There was a statement in the code being flagged by the editor
 because a command was misspelled! The thing that made it so insidious was that the misspelling actually represented a
 legitimate command. It was only the argument list that differentiated the command I wanted from the command I had typed.
-So, it wasn't immediately apparent to me why the editor was flagging statement. This time, it only took a few moments
-for me to figure it out.
+So, it wasn't immediately apparent to me why the editor was flagging the statement. Fortunately, it only took a few 
+moments or me to figure it out.
 
-As a measure against disaster, I push to GitHub frequently.
+To divert a disaster, I push to GitHub frequently.
+
+The test suite is not very robust.
+
+I spent the majority of my time trying to get the _removeLeaves()_ method to work, only to find out that the unit test's
+method call was flawed. Specifically, I had placed arguments in the parameter list which, to the best of my knowledge,
+isn't expecting any. I have no idea how long the _removeLeaves()_ method might have been working correctly before I
+discovered the root cause. All I can say is that I toiled for at least a couple of hours.
+
