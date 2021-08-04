@@ -20,6 +20,7 @@ public class Homework6Test {
     public void setUp() {
         /*
             T H E   F I R S T   T R E E
+
                         (1)
                        /   \
                      (2)   (3)
@@ -42,6 +43,7 @@ public class Homework6Test {
         firstTree.getRoot().getRight().getRight().getRight().insertRight(9);
         /*
                     T H E   S E C O N D   T R E E
+
                                (6)
                               /   \
                              /     \
@@ -228,6 +230,9 @@ public class Homework6Test {
         Homework6.removeLeaves(firstTree);
         Homework6.printInOrder(firstTree);
         assertTrue(this.consoleContent.toString().contains("4 2 1 3 6 8"));
+        Homework6.removeLeaves(secondTree);
+        Homework6.printInOrder(secondTree);
+        assertTrue(this.consoleContent.toString().contains("2 4 6 8"));
     }
 
 }
