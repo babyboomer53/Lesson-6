@@ -657,7 +657,8 @@ public class Homework6 {
             System.out.print("After removing the leaf nodes from tree #1: ");
             Homework6.printInOrder(firstTree);
             System.out.println();
-            System.out.printf("The height of tree #1 after removing the leaf nodes is, %d%n", Homework6.getHeight(firstTree));
+            System.out.printf("The height of tree #1 after removing the leaf nodes is, %d%n",
+                    Homework6.getHeight(firstTree));
 
             //   T H E   S E C O N D   T R E E
             System.out.println();
@@ -677,7 +678,8 @@ public class Homework6 {
             System.out.print("After removing the leaf nodes from tree #2: ");
             Homework6.printInOrder(secondTree);
             System.out.println();
-            System.out.printf("The height of tree #1 after removing the leaf nodes is, %d%n", Homework6.getHeight(secondTree));
+            System.out.printf("The height of tree #2 after removing the leaf nodes is, %d%n",
+                    Homework6.getHeight(secondTree));
         }
     }
 }
