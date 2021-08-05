@@ -13,17 +13,17 @@ The seven methods were as follows:
 * *public static int countLeaves(BinaryTree tree)*
     * Returns the number of leaf nodes in the tree.
 * *public static int countNonLeaves(BinaryTree tree)*
-    *     Returns the number of non-leaf nodes in the tree.
+    * Returns the number of non-leaf nodes in the tree.
 * *public static int getHeight(BinaryTree tree)*
-    *     Returns the height of the tree.
+    * Returns the height of the tree.
 * *public static void printPreOrder(BinaryTree tree)*
-    *     Returns the height of the tree.
+    * Returns the height of the tree.
 * *public static void printInOrder(BinaryTree tree)*
-    *     Prints the elements of the tree using an in-order traversal.
+    * Prints the elements of the tree using an in-order traversal.
 * *public static void printPostOrder(BinaryTree tree)*
-    *     Prints the elements of the tree using a post-order traversal.
+    * Prints the elements of the tree using a post-order traversal.
 * *public static void removeLeaves(BinaryTree tree)*
-    *     Removes all leaf nodes from the tree.
+    * Removes all leaf nodes from the tree.
 
 ### Implementation Plan
 For this project I relied on several classes provided courtesy of the instructor. I *did* perform a modicum of unit

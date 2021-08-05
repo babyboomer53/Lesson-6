@@ -1,0 +1,36 @@
+
+E
+java:S3740Ä"/Provide the parametrized type for this generic.(ó®Ù
+K
+java:S3740«"/Provide the parametrized type for this generic.(ˆŸ³ûÿÿÿÿ
+K
+java:S3740¶"/Provide the parametrized type for this generic.(şãüûÿÿÿÿ
+F
+java:S3740Á"/Provide the parametrized type for this generic.(‘è¢ß
+K
+java:S3740Í"/Provide the parametrized type for this generic.(’Şëúÿÿÿÿ
+K
+java:S3740Í"/Provide the parametrized type for this generic.(’Şëúÿÿÿÿ
+F
+java:S3740Ş"/Provide the parametrized type for this generic.(€ÒÆ„
+K
+java:S3740ß"/Provide the parametrized type for this generic.(şØÕûÿÿÿÿ
+N
+java:S1117S"8Rename "data" which hides the field declared at line 16.(ªÀñ‚
+N
+java:S1117d"8Rename "data" which hides the field declared at line 16.(ï€–”
+p
+java:S2293š"YReplace the type specification in this constructor call with the diamond operator ("<>").(„‚™¸
+l
+java:S1206Ø"PThis class overrides "equals()" and should therefore also override "hashCode()".(İ¢êÍıÿÿÿÿ
+p
+java:S2293õ"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ã¿Àâ
+Q
+java:S1118":Add a private constructor to hide the implicit public one.(™”Â÷
+u
+java:S2293İ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßçŒ şÿÿÿÿ
+u
+java:S2293÷"YReplace the type specification in this constructor call with the diamond operator ("<>").(›Í™•øÿÿÿÿ
+G
+java:S1481ç"0Remove this unused "testVisitor" local variable.(Ü»ŸÂ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ª»ş‰ùÿÿÿÿ
