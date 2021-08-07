@@ -657,7 +657,7 @@ public class Homework6 {
     BinaryTree.Node node = tree.getRoot();
     leafDelete(node);
   }
-
+  
   public static class Driver {
     public static void main(String[] args) {
       Homework6.BinaryTree<Integer> firstTree;
