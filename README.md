@@ -6,7 +6,7 @@
 ### Binary Tree Algorithms
 ### Problem Statement
 In this assignment,we were asked to implement a variety of methods that operate on binary trees, and to test those
-methods on the following two trees:
+methods using the following two trees:
 ![](the-tree-diagrams.png)
 We were required to implement seven methods and use the two trees illustrated above to demonstrate their functionality.
 The seven methods were as follows:
