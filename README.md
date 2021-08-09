@@ -1024,7 +1024,7 @@ So, it wasn't immediately apparent to me why the editor was flagging the stateme
 moments for me to figure it out. _Unfortunately_, that is not always the case. Sometimes it can take hours to find an
 error caused by single misplaced character in the source code.
 
-To ovoid a disaster, I push the project repository to GitHub frequently.
+To avert a disaster, I push the project repository to GitHub frequently.
 
 The test suite is not very robust, but I soon realized that I could spend forever refining the test suite, and never get
 around to anything else.
