@@ -8,6 +8,7 @@
 In this assignment,we were asked to implement a variety of methods that operate on binary trees, and to test those
 methods using the following two trees:
 ![](the-tree-diagrams.png)
+
 We were required to implement seven methods and use the two trees illustrated above to demonstrate their functionality.
 The seven methods were as follows:
 * *public static int countLeaves(BinaryTree tree)*
@@ -764,7 +765,7 @@ public class Homework6Test {
                        /   \
                      (2)   (3)
                     /     /   \
-                  (4)    (5)  (6)
+                  (4)   (5)   (6)
                  /               \
                (7)               (8)
                                     \
